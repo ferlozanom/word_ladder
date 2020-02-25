@@ -48,7 +48,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
 
     while len(q) > 0:
         first_stack = q.popleft()
-        for word in dictionary:
+        for word in set(dictionary):
             if _adjacent(first_stack[len(first_stack)-1],word):
                 if word == end_word:
                     ladder = first_stack       
